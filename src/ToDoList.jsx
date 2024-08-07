@@ -37,7 +37,33 @@ function ToDoList() {
                 placeholder="Enter a task..."
                 value={newTask}
                 onChange={handleInputChange}/>
+            <button className="add-button"
+                    onClick={addTask}>
+                Add
+            </button>
         </div>
+
+        <ol>
+
+            {tasks.map((task, index) => 
+                <li key={index}>
+                    <span className="text">{task}</span>
+                    <button className="delete-button"
+                            onClick={() => deleteTask(index)}>
+                        Delete
+                    </button>
+                    <button className="move-button"
+                            onClick={() => moveTaskUp(index)}>
+                        UP
+                    </button>
+                    <button className="move-button"
+                            onClick={() => moveTaskDown(index)}>
+                        DOWN
+                    </button>
+                </li>
+            )}
+
+        </ol>
 
     </div>)
 }
