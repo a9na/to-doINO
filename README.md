@@ -1,4 +1,4 @@
 # to-doINO
 
-A to-do list app built using react
+A to-do list app built using React
 
